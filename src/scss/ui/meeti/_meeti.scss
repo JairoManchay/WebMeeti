@@ -1,0 +1,22 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.informacion{
+    padding: 5rem 0;
+
+    &__heading{
+        text-align: center;
+        padding-bottom: 3rem;
+        @include m.heading;
+    }
+
+    &__grid{
+        @include m.tablet {
+            @include m.grid(3, 2rem);
+        }
+    }
+
+    &__principal{
+        grid-column: 1/3;
+    }
+}
